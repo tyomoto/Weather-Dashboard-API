@@ -26,7 +26,7 @@
                     <div class="col-sm-3 bg-secondary p-0">
                         <!-- Search Form -->
                         <div class="search-form-container">
-                            <form id="seachform">
+                            <form id="searchform">
                                 <label for="search-input" class="search-label text-white m-0">Search for a City:</label>
                                 <div class="row m-1">
                                         <input type="text" id="search-input" name="search-input" class="search-input rounded">
@@ -40,10 +40,10 @@
                         </div>
                     </div>
                     <!-- RESULTS COLUMN -->
-                    <div class="col-sm-9 p-0">
+                    <div class="col-sm-9 p-1">
                         <!-- Current Weather of Searched City -->
                         <div id="current-weather-container" class="row d-block">
-                            <div class="current-cityname-container d-flex"></div>
+                            <div class="current-cityname-container"></div>
                                 <h3 id="current-cityname"class="current-cityname d-inline"></h3>
                                 <img id="current-weather-icon" class="d-inline" src="" alt>
                             </div>
@@ -53,43 +53,48 @@
                             <p id="current-uv-index"></p>
                         </div>
                         <!-- Future 5 Day Forecast -->
-                        <div id="future-forecast-container" class="row d-block">
-                            <h3></h3>
+                        <div id="future-forecast-container" class="row m-3 d-block">
+                            <h3 id="future-forecast-container-title"></h3>
                             <div id="future-forecasts-cards-container" class="d-flex justify-content-between">
                                 <!-- Day 1 -->
                                 <div class="future-forecast-card rounded">
-                                    <p id="future-forecast-date1" class="future-forecast-date1"></p>
-                                    <img id="future-forecast-icon1" src="" >
-                                    <p id="future-forecast-temperature1"></p>
-                                    <p id="future-forecast-humidity1"></p>
+                                    <p id="future-forecast-date-1" class="future-forecast-date1"></p>
+                                    <img id="future-forecast-icon-1" src="" >
+                                    <p id="future-forecast-temperature-1"></p>
+                                    <p id="future-forecast-humidity-1"></p>
+                                    <p id="future-forecast-windspeed-1"></p>
                                 </div>
                                 <!-- Day 2 -->
                                 <div class="future-forecast-card rounded">
-                                    <p id="future-forecast-date2"></p>
-                                    <img id="future-forecast-icon2" src="" >
-                                    <p id="future-forecast-temperature2"></p>
-                                    <p id="future-forecast-humidity2"></p>
+                                    <p id="future-forecast-date-2"></p>
+                                    <img id="future-forecast-icon-2" src="" >
+                                    <p id="future-forecast-temperature-2"></p>
+                                    <p id="future-forecast-humidity-2"></p>
+                                    <p id="future-forecast-windspeed-2"></p>
                                 </div>
                                 <!-- Day 3 -->
                                 <div class="future-forecast-card rounded">
-                                    <p id="future-forecast-date3"></p>
-                                    <img id="future-forecast-icon3" src="" >
-                                    <p id="future-forecast-temperature3"></p>
-                                    <p id="future-forecast-humidity3"></p>
+                                    <p id="future-forecast-date-3"></p>
+                                    <img id="future-forecast-icon-3" src="" >
+                                    <p id="future-forecast-temperature-3"></p>
+                                    <p id="future-forecast-humidity-3"></p>
+                                    <p id="future-forecast-windspeed-3"></p>
                                 </div>
                                 <!-- Day 4 -->
                                 <div class="future-forecast-card rounded">
-                                    <p id="future-forecast-date4"></p>
-                                    <img id="future-forecast-icon4" src="" >
-                                    <p id="future-forecast-temperature4"></p>
-                                    <p id="future-forecast-humidity4"></p>
+                                    <p id="future-forecast-date-4"></p>
+                                    <img id="future-forecast-icon-4" src="" >
+                                    <p id="future-forecast-temperature-4"></p>
+                                    <p id="future-forecast-humidity-4"></p>
+                                    <p id="future-forecast-windspeed-4"></p>
                                 </div>
                                 <!-- Day 5 -->
                                 <div class="future-forecast-card rounded">
-                                    <p id="future-forecast-date5"></p>
-                                    <img id="future-forecast-icon5" src="" >
-                                    <p id="future-forecast-temperature5"></p>
-                                    <p id="future-forecast-humidity5"></p>
+                                    <p id="future-forecast-date-5"></p>
+                                    <img id="future-forecast-icon-5" src="" >
+                                    <p id="future-forecast-temperature-5"></p>
+                                    <p id="future-forecast-humidity-5"></p>
+                                    <p id="future-forecast-windspeed-5"></p>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +105,7 @@
     </main>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 <script src="./assets/script.js"></script>
