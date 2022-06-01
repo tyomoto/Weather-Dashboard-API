@@ -121,6 +121,7 @@ var fiveDayForecastBox = function(cityName){
 
 // Function to make a searched city part of the search history below the input
 var searchHistoryList = function(cityName) {
+    $('.search-history:contains("' + cityName + '")').remove();
     // makes new p element for city name 
     var searchHistoryEl = $("<p>");
     searchHistoryEl.addClass("search-history");
@@ -146,6 +147,8 @@ var searchHistoryList = function(cityName) {
 
     // Then have the search input reset so the user doesn't have to manually delete
     $("#search-input").val("");
+    // If the it has already been seached then remove the past-search item
+
 };
 
 // Function to load the saved local history when the user clicks the city's button
@@ -156,7 +159,12 @@ var loadHistoryList = function(){
     }
 
     storedSearchHistory = JSON.parse(storedSearchHistory);
-}
+    // need to make a loop to go through all the storedsearch history and have it all added to the list
+    for (var i = 0; i < storedSearchHistory.length; i++) {
+        searchHistoryList(storedSearchHistory[i]);
+    }
+    
+};
 
 $("#searchform").on("submit", function(){
     event.preventDefault();
@@ -177,4 +185,4 @@ $("#search-history-container").on("click", "p", function(){
 
 });
 
-loadSearch
+loadHistoryList();

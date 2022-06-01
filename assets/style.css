@@ -63,7 +63,7 @@
     display: inline;
     margin-left: 20px;
 }
-
+/* UV Index has been updated now to include low, moderate, high, very high, and extreme instead of favorable, moderate, or severe */
 .low-uv {
     background-color: green;
 }
@@ -86,12 +86,11 @@
 }
 
 .future-card-stats {
-    width: 15%;
+    width: 16%;  
 }
 
 .future-forecast-icon {
     width: 60px;
     height: 60px;
-    margin: 0 0 0 10px;
 }
 
